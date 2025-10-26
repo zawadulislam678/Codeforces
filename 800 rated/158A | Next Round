@@ -1,0 +1,28 @@
+//https://codeforces.com/problemset/problem/158/A
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+ 
+    int arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+ 
+    int threshold = arr[k - 1]; // score of the k-th place if search for 5th place then it would be 0,1,2,3,4 that's why 5-1 = 4
+    int count = 0;
+ 
+    for(int i = 0; i < n; i++)
+    {
+        if(arr[i] >= threshold && arr[i] > 0)
+        {
+            count++;
+        }
+    }
+ 
+    cout << count << endl;
+}
