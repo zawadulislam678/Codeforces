@@ -1,0 +1,34 @@
+//https://codeforces.com/problemset/problem/112/A
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    string s1,s2;
+    cin>>s1>>s2;
+ 
+    int l1,l2;
+    for(int i=0; i<s1.size(); i++)
+    {
+        l1 = tolower(s1[i]);
+        l2 = tolower(s2[i]);
+        if(l1 == l2)
+        {
+            continue;
+        }
+        else if(l1 < l2)
+        {
+            cout<<-1;
+            break;
+        }
+        else
+        {
+            cout<<1;
+            break;
+        }
+    }
+    if(l1 == l2)
+        {
+            cout<<0;
+        }
+    return 0;
+}
